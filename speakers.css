@@ -5,15 +5,15 @@
 }
 
 .speaker {
-  width: 200px;
+/*  width: 200px;
   height: 200px;
   background-size: cover;
   background-position: center;
   margin: 5px;
   float: left;
-  position: relative;
+  position: relative; */
   overflow: hidden;
-  -webkit-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; 
 }
 .speaker p {
   opacity: 0;
