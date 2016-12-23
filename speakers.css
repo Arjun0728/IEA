@@ -34,8 +34,8 @@
 
 .speakerText1 {
     position: absolute;
-    top: 40%;
-    color:#ffffff;
+    top: 0%;
+    color: #ffffff;
     background-color: rgba(164, 16, 52, 0.4);
     width: 100%;
     height: 100%;
