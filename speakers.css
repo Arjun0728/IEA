@@ -1,0 +1,57 @@
+.container {
+  clear: both;
+  margin: 0 auto;
+  max-width: 1050px;
+}
+
+.speaker {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  margin: 5px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.speaker p {
+  opacity: 0;
+  transition: .2s;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  line-height: 200px;
+}
+.speaker:after, .speaker:before {
+  opacity: 0;
+  transition: .2s;
+  content: "";
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(90px) saturate(4);
+  filter: blur(90px) saturate(4);
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .speaker:after, .speaker:before {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+.speaker:hover p, .speaker:hover:after, .speaker:hover:before {
+  opacity: 1;
+}
+
+.hover .speaker p, .hover .speaker:after, .hover .speaker:before {
+  opacity: 1;
+}
