@@ -31,3 +31,28 @@
     top: 60%;
     left: 40%;
 }
+
+.speakerText1 {
+    position: absolute;
+    top: 40%;
+    color:#ffffff;
+    background-color: rgba(164, 16, 52, 0.4)
+    width: 100px;
+    height: 100px;
+    line-height:100px;
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; 
+}
+
+.speakerText1:hover {
+    opacity:1;
+}
+
+img {
+    z-index: 1;
+}
