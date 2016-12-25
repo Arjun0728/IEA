@@ -1269,7 +1269,7 @@ body.stretched #header.full-header #primary-menu ul li.mega-menu .mega-menu-cont
 	display: block;
 	position: relative;
 	top: 0;
-	min-width: inherit;
+/*	min-width: inherit; */
 	border: 0;
 	box-shadow: none;
 	background-color: transparent;
