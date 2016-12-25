@@ -1283,8 +1283,9 @@ body.stretched #header.full-header #primary-menu ul li.mega-menu .mega-menu-cont
 }
 
 #primary-menu ul li .mega-menu-content ul.mega-menu-column {
-	float: left;
+	float: right;
 	margin: 0;
+	clear: left;
 }
 
 #primary-menu ul li .mega-menu-content ul.mega-menu-column.col-5 { width: 20%; }
