@@ -1,0 +1,60 @@
+h1 {
+	font-weight: bold;
+	font-size: 35px;
+	margin: 0;
+}
+
+h3 {
+	font-size: 18px;
+	color: $primary-color;
+	margin: 0;
+}
+h4 {
+	font-size: 16px;
+	color: #000000;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+a, a:active, a:focus, a:visited {
+	color: $primary-color;
+	text-decoration: none;
+}
+
+a:hover {
+	color: $secondary-color;
+	text-decoration: none;
+}
+
+.primary-color {
+	color: $primary-color;
+}
+
+.primary-background {
+	color: $primary-color;
+}
+
+.secondary-color {
+	color: $secondary-color;
+}
+
+.secondary-background {
+	color: $secondary-color;
+}
+
+.text-container p {
+	margin-bottom: 30px;
+}
+
+blockquote {
+	text-align: right;
+	color: $primary-color;
+	padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-style: italic;
+    border: 0px;
+}

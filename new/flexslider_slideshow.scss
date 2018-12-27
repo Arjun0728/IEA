@@ -1,0 +1,93 @@
+@import "susy";
+@import "compass/css3";
+
+
+// colors
+$bg_color: #f1f2f2;
+$duration: 5; // number of seconds
+
+// Shared between Inactive and Active
+$dot_container_size: 20px;   // px value. e.g: 20px
+$dot_stroke_width: 2; // unitless value. e.g: 10
+
+// Active
+$dot_active_stroke_color: #32947a;
+
+// Inactive
+$dot_inactive_stroke_color:#d4e4e0; 
+
+
+
+body     {background:$bg_color;}
+
+.my-slider {max-width:800px; margin: 0 auto;}
+h2 {font: bold 12px/1 courier; color:#fff; background:$dot_active_stroke_color; padding:10px; margin:0;}
+
+.flexslider {margin-top:20px;}
+
+.control-dots {
+  position:relative;
+   margin: 20px 0 0 0;
+   text-align:center;
+  li   {
+    margin: 0;
+    display:inline-block;
+    cursor:arrow !important; // 'disable' click 
+    width: $dot_container_size;
+    height: $dot_container_size;
+  }
+
+}
+
+// defeat clicking the dotes
+.control-dots:after {content: ""; position:absolute; display:block; width:100%; height:$dot_container_size; left:0; top:0; background:transparent;}
+
+
+svg {
+   display: table;
+   width:100% !important;
+   height:100% !important;
+}
+
+circle {
+  display: table-cell;
+  fill: none;
+  stroke: $dot_inactive_stroke_color;
+  stroke-width: $dot_stroke_width;
+  stroke-dasharray: 629; 
+  vertical-align: middle;
+  transform-origin: 0 0; // this silly offsetting is all so Firefox can transform around the 0 0 origin
+}
+
+
+$real_duration: $duration * 20; // what is going on??
+
+
+.flex-active  circle.progress {
+  stroke: $dot_active_stroke_color;
+  animation: progress $real_duration + s linear;
+  transform: rotate(-90deg) scale(1, 1);
+}
+
+
+.flex-active circle.base {
+   transform: rotate(-90deg);
+}
+
+@keyframes progress {
+  from { stroke-dashoffset: 629; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes base {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: 629; }
+}
+
+
+// fallbacks
+.no-svg .control-dots {
+  svg {display:none;}
+  li { border-radius:20px; background:$dot_inactive_stroke_color;}
+  li.flex-active {background:$dot_active_stroke_color;}
+  }

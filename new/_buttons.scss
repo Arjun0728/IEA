@@ -1,0 +1,150 @@
+a.button, button.button {
+	display: inline-block;
+	border-radius: 30px;
+	padding: 12px 30px;
+	font-size: 18px;
+	border: 2px solid $primary-color;
+	&.no-padding{
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-right: 0;
+	}
+	&.smaller-btn{
+		font-size: 16px;
+		padding: 8px 20px;
+		@media (max-width: 768px){
+		font-size: 12px;
+	}
+	}
+	@media (max-width: 768px){
+		font-size: 14px;
+	}
+}
+
+a.button-filled, button.button-filled {
+	background-color: $primary-color;
+	color: #ffffff;
+
+	&:hover{
+		background-color: $secondary-color;
+		border-color: $secondary-color;
+	}
+}
+
+a.button-sm, button.button-sm {
+    padding: 0px 10px;
+}
+
+a.button-bordered, button.button-bordered {
+	background-color: #ffffff;
+	color: $primary-color;
+
+	&:hover {
+		border-color: $secondary-color;
+		color: $secondary-color;
+	}
+}
+
+.fb-icon-bg {
+	background: #3b5998;
+	height: 37px;
+	margin: 0 0 -37px 0;
+	width: 41px;
+	@media (min-width: 630px){
+		vertical-align: top;
+		display: inline-block;
+	}
+}
+
+.fb-icon-bg:after {
+  content: url('/images/ek13/facebook.png');
+  display: block;
+  padding: 9px 10px 5px 15px;
+}
+
+.fb-bg {
+	background: #5876b6;
+	height: 37px;
+	margin: 0 0 30px 41px;
+	width: 207px;
+
+	@media (min-width: 630px){
+		vertical-align: top;
+		display: inline-block;
+		margin: 0 15px 30px -4px;
+	}
+}
+
+.fb-bg:after {
+	color: #fff;
+	content: "SHARE ON FACEBOOK";
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px;
+	height: 37px;
+	left: 12%;
+	position: relative;
+	text-transform: uppercase;
+	top: 22%;
+	width: 103px;
+}
+
+.fb-bg:hover{
+  cursor: pointer;
+}
+
+.fb-bg:active{
+  background: #354f88;
+}
+
+/* Twitter */
+.twi-icon-bg:after {
+  content: url(/images/ek13/twitter.png);
+  display: block;
+  padding: 9px 10px 6px 11px;
+}
+
+.twi-icon-bg {
+	background: #1da1f3;
+	height: 37px;
+	margin: 0 0 -37px 0;
+	width: 41px;
+
+	@media (min-width: 630px){
+		vertical-align: top;
+		display: inline-block;
+	}
+}
+
+.twi-bg {
+	background: #54b2ed;
+	height: 37px;
+	margin: 0 0 30px 41px;
+	width: 207px;
+
+	@media (min-width: 630px){
+		vertical-align: top;
+		display: inline-block;
+		margin: 0 0 30px -4px;
+	}
+}
+
+.twi-bg:after {
+	color: #fff;
+	content: "SHARE ON TWITTER";
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px;
+	height: 37px;
+  	left: 15%;
+	position: relative;
+  	text-transform: uppercase;
+	top: 22%;
+  	width: 41px;
+}
+
+.twi-bg:hover {
+  cursor: pointer;
+}
+
+.twi-bg:active {
+  background: #40a2d1;
+}
